@@ -58,16 +58,37 @@
 {{ range first 1 (after 1 $reusablePages) }}
 <div id="home" class="strip bg-primary bg-cover bg-position-top bg-overlay" style='background-image: url("{{ .Params.background | relURL }}");'>
   <div class="container pt-8 pb-8 pb-md-12 pt-md-12">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 text-center text-white">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-8 text-white">
         <h2>{{ .Title }}</h2>
         {{ .Content }}
+        {{ if .Params.button }}
         <a class="button button-white" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
+        {{ end }}
       </div>
     </div>
   </div>
 </div>
 {{ end }}
+
+{{ $partners := where (where .Site.RegularPages "Type" "partners") ".Params.featured" true }}
+<div class="container pt-8 pb-8 pb-md-14 pt-md-14">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <h2 class="text-center mb-3">Supported by</h2>
+    </div>
+    {{ range first 2 (sort $partners ".Params.weight") }}
+    <div class="col-12 col-md-4 mb-1 offset-md-2">
+      {{ .Render "partners" }}
+    </div>
+    {{ end }}
+<!--    <div class="col-12 text-center">
+      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
+    </div>-->
+  </div>
+</div>
+
+
 
 {{ end }}
 
