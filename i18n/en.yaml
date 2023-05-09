@@ -1,4 +1,7 @@
 supported:
     other: Supported by
-
+services:
+    other: Our Services
+view services:
+    other: View All Services
 about: About Us
