@@ -5,9 +5,14 @@
     <li class="menu-item-{{ .Name | lower }}{{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.RelPermalink .URL) }} active{{ end }}">
       <a href="{{.URL}}">
         {{ .Pre }}
-        <span>{{ .Name }}</span>
+        <span>{{ or (T .Identifier) .Name | safeHTML }}</span>
       </a>
     </li>
     {{end}}
+    {{ if .IsTranslated }}<li> 
+      {{ range .Translations }}
+          <div style="text-decoration: underline;"><a href="{{ .Permalink }}"> {{ index $.Site.Params.languageNames .Lang }}</a></div>
+      {{ end}}</li>
+  {{ end }}
   </ul>
 </div>
