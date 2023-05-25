@@ -9,5 +9,10 @@
       </a>
     </li>
     {{end}}
+    {{ if .IsTranslated }}<li> 
+      {{ range .Translations }}
+          <div style="text-decoration: underline;"><a href="{{ .Permalink }}"> {{ index $.Site.Params.languageNames .Lang }}</a></div>
+      {{ end}}</li>
+  {{ end }}
   </ul>
 </div>
