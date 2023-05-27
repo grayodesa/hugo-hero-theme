@@ -1,8 +1,9 @@
 supported:
     other: За підтримки
 services:
-    other: Наши послуги
-view services:
-    other: Подивитися усі послуги
+    other: Наша діяльнисть
+view activity:
+    other: Подивитися діяльнисть
 
 about: Про нас
+services: Діяльнисть

@@ -1,7 +1,8 @@
 supported:
     other: Supported by
-services:
-    other: Our Services
-view services:
-    other: View All Services
+activity:
+    other: Our activity
+view activity:
+    other: View All Activity
 about: About Us
+services: Activity
