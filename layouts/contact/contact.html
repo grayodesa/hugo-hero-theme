@@ -16,22 +16,26 @@
   <div class="row">
     <div class="col-12 col-md-8">
       {{ .Content }}
+      {{ $data := index .Site.Data .Site.Language.Lang "contact" }}
       <ul>
-        {{ if .Site.Data.contact.phone }}
-        <li><strong>Phone: </strong>{{ .Site.Data.contact.phone }}</li>
-        {{ end }}
-        {{ if .Site.Data.contact.email }}
-        <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
-            {{ .Site.Data.contact.email }}</a></li>
-        {{ end }}
-        {{ if .Site.Data.contact.address }}
-        <li style="white-space: pre-wrap;"><strong>Address: </strong><br>{{ .Site.Data.contact.address }}</li>
-        {{ end }}
-      </ul>
-      {{ if .Site.Data.contact.hours }}
-      <h4 class="mt-4">Business Hours</h4>
+
+        <ul>
+          {{ if $data.phone }}
+          <li><strong>{{ i18n "contactPhone" }}: </strong>{{ $data.phone }}</li>
+          {{ end }}
+          {{ if $data.email }}
+          <li><strong>{{ i18n "contactEmail" }}: </strong><a href="mailto:{{ $data.email }}">
+              {{ $data.email }}</a></li>
+          {{ end }}
+          {{ if $data.address }}
+          <li style="white-space: pre-wrap;"><strong>{{ i18n "contactAddress" }}: </strong><br>{{ $data.address }}</li>
+          {{ end }}
+        </ul>
+        {{ if $data.hours }}
+        <h4 class="mt-4">{{ i18n "businessHours" }}</h4>
+        
       <table class="table table-sm opening-hours-table">
-        {{ range .Site.Data.contact.hours }}
+        {{ range $data.hours }}
         <tr>
           <td class="day font-weight-bold">{{ .day }}</td>
           <td class="opens">{{ .open }}</td>
@@ -41,6 +45,8 @@
         {{ end }}
       </table>
       {{ end }}
+
+      
     </div>
   </div>
 </div>

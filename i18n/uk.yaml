@@ -7,3 +7,8 @@ view activity:
 
 about: Про нас
 services: Діяльнисть
+
+contactPhone: "Телефон" 
+contactEmail: "Електронна пошта" 
+contactAddress: "Адреса" 
+businessHours: "Години роботи"

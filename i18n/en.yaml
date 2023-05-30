@@ -6,3 +6,9 @@ view activity:
     other: View All Activity
 about: About Us
 services: Activity
+
+contactPhone: "Phone" 
+contactEmail: "Email" 
+contactAddress: "Address" 
+businessHours: "Business Hours"
+
