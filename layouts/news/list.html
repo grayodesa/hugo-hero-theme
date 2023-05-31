@@ -1,0 +1,24 @@
+{{ define "header_css" }}{{ end }} {{ define "body_classes" }}{{ end }}
+{{ define "header_classes" }}{{ end }}
+{{ define "main" }}
+
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
+
+<div class="container pt-10 pb-6">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="title-1 black">{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+
+<div class="container pb-6">
+  <div class="row">
+    {{ range .Pages }}
+    <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

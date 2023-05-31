@@ -1,0 +1,9 @@
+<div class="summary">
+  {{ $imageResource := .Resources.GetMatch (.Params.image) }}
+  {{ if $imageResource }}
+  {{ $resizedImage := $imageResource.Resize "300x" }}
+  <img alt="{{ .Title }}" src="{{ $resizedImage.Permalink }}" />
+  {{ end }}
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ .Summary }}
+</div>
