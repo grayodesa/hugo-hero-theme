@@ -6,7 +6,7 @@
   {{ end }}
   <div class="service-content">
     <h2 class="service-title">
-      <a  style="color:white!important;" href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
     {{ if gt (len .Summary) 120 }}
     {{ .Summary | truncate 120 }}
