@@ -1,12 +1,12 @@
 supported:
     other: За підтримки
-services:
-    other: Наша діяльнисть
+activity:
+    other: Наша діяльність
 view activity:
-    other: Подивитися діяльнисть
+    other: Подивитися діяльність
 
 about: Про нас
-services: Діяльнисть
+services: Діяльність
 
 contactPhone: "Телефон" 
 contactEmail: "Електронна пошта" 
