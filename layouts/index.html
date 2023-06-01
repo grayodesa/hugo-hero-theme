@@ -60,12 +60,14 @@
     </div>
     {{ end }}
     <div class="col-12 text-center">
-      <a class="button button-primary" href="{{ .Site.BaseURL }}activity">{{ i18n "view activity"}}</a>
+      <a class="button button-primary" href="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Site.LanguagePrefix }}/activity">{{ i18n "view activity"}}</a>
     </div>
   </div>
 </div>
 </div>
 {{end}}
+
+
 
 {{ range first 1 (after 1 $reusablePages) }}
 <div id="home" class="strip bg-cover bg-position-top bg-overlay" style='background-image: url("{{ .Params.background | relURL }}");'>
