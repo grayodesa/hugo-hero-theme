@@ -8,8 +8,8 @@
     <h2 class="service-title mb-2">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
-    {{ if gt (len .Summary) 120 }}
-    {{ .Summary | truncate 120 }}
+    {{ if gt (len .Summary) 150 }}
+    {{ .Summary | truncate 150 }}
     {{ else }}
     {{ .Summary }}
     {{ end }}
