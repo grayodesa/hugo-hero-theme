@@ -1,5 +1,6 @@
 .service-summary {
 //  text-align: center;
+  padding: 0 20px!important;
   .service-image {
     img {
       width: 100%;
@@ -10,9 +11,11 @@
     .service-title {
       font-family: $font-family-heading;
       font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.6!important;
     }
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
 }

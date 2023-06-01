@@ -1,11 +1,11 @@
 <div class="service service-summary">
   {{ if .Params.thumbnail }}
-  <div class="service-image">
+  <div class="service-image mb-3">
     <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
   </div>
   {{ end }}
   <div class="service-content">
-    <h2 class="service-title">
+    <h2 class="service-title mb-2">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
     {{ if gt (len .Summary) 120 }}

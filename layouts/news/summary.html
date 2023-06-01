@@ -1,9 +1,9 @@
-<div class="summary">
+<div class="summary mb-2">
   {{ $imageResource := .Resources.GetMatch (.Params.image) }}
   {{ if $imageResource }}
   {{ $resizedImage := $imageResource.Resize "300x" }}
-  <img alt="{{ .Title }}" src="{{ $resizedImage.Permalink }}" />
+  <img class="service-image mb-3" alt="{{ .Title }}" src="{{ $resizedImage.Permalink }}" />
   {{ end }}
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <h2 class="service-title mb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   {{ .Summary }}
 </div>
