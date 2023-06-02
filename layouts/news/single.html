@@ -23,7 +23,10 @@
               {{ $resizedImage := $imageResource.Resize "800x" }}
               <img src="{{ $resizedImage.Permalink }}" alt="{{ .Title }}" />
               {{ end }}
-              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{i18n .Date.Month}}, {{ .Date.Day }}, {{ .Date.Year }}
+            </time>
+            
       <div class="work work-single">
         <div class="content">{{.Content}}</div>
       </div>

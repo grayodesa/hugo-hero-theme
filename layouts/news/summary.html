@@ -5,5 +5,8 @@
   <img class="service-image mb-3" alt="{{ .Title }}" src="{{ $resizedImage.Permalink }}" />
   {{ end }}
   <h2 class="service-title mb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <time datetime="{{ .Date.Format "2006-01-02" }}">
+    {{i18n .Date.Month}}, {{ .Date.Day }}, {{ .Date.Year }}
+</time>
   {{ .Summary }}
 </div>
