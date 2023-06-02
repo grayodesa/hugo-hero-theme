@@ -98,7 +98,7 @@
     </div>
     {{ end }}
     <div class="col-12 text-center">
-      <a class="button" href="{{ .Site.BaseURL }}/news">{{ i18n "view_all_news"}}</a>
+      <a class="button" href="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Site.LanguagePrefix }}/news">{{ i18n "view_all_news"}}</a>
     </div>
   </div>
 </div>
