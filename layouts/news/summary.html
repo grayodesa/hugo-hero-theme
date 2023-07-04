@@ -2,7 +2,7 @@
   {{ $imageResource := .Resources.GetMatch (.Params.image) }}
   {{ if $imageResource }}
   {{ $resizedImage := $imageResource.Resize "300x webp" }}
-  <img class="service-image mb-3" alt="{{ .Title }}" src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" />
+  <img class="service-image mb-3" alt="{{ .Title }}" src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" loading="lazy" />
   {{ end }}
   <h2 class="service-title mb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <time datetime="{{ .Date.Format "2006-01-02" }}">

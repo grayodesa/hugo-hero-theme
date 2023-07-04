@@ -9,7 +9,7 @@
       {{ if ne $ext "avif" }}
       <source srcset="{{ $srcbase }}.webp" type="image/webp">
       {{ end }}
-      <img src="{{ $thumbnail }}" alt="{{ .Title }}">
+      <img src="{{ $thumbnail }}" alt="{{ .Title }}" loading="lazy" />
     </picture>
   </div>
 
