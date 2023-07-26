@@ -115,17 +115,28 @@ time {
     font-size: smaller;
 }
 
-input[type=submit] {
-    background: rgba(10, 29, 242, 0.332);
-    padding: var(--nf-input-size);
-    display: block;
-    width: 100%;
-    border-radius: var(--nf-input-border-radius);
-    border: 1px solid var(--nf-input-border-color);
-    outline: none;
-    cursor: pointer;
-}
-label.required:after {
-    content: "*";
-    color: red;
+input[type="submit"] {
+    background-color: #002FA7; // International Klein Blue background
+    border: none; // Remove border
+    color: white; // White text
+    padding: 15px 32px; // Padding
+    text-align: center; // Centered text
+    text-decoration: none; // Remove underline
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; // Transition
+    cursor: pointer; // Cursor pointer on hover
   }
+  
+  input[type="submit"]:hover {
+    background-color: #001F7A; // Darker blue on hover
+  }
+  
+  input:required::after {
+    content: "*"; // Asterisk
+    color: red; // Red color
+    position: absolute; // Position it absolutely
+    margin-left: 5px; // Add some space between the input and the asterisk
+  }
+  
