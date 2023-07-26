@@ -114,3 +114,18 @@
 time {
     font-size: smaller;
 }
+
+input[type=submit] {
+    background: rgba(10, 29, 242, 0.332);
+    padding: var(--nf-input-size);
+    display: block;
+    width: 100%;
+    border-radius: var(--nf-input-border-radius);
+    border: 1px solid var(--nf-input-border-color);
+    outline: none;
+    cursor: pointer;
+}
+label.required:after {
+    content: "*";
+    color: red;
+  }
