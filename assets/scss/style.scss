@@ -140,3 +140,13 @@ input[type="submit"] {
     margin-left: 5px; // Add some space between the input and the asterisk
   }
   
+  .lhi-banner {
+    text-align: center;
+    margin: 20px 0;
+    /* Add any other styles you deem necessary */
+}
+
+.lhi-banner img {
+    max-width: 100%; /* This ensures the image doesn't overflow the banner container */
+    height: 60px;
+}
